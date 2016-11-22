@@ -3,12 +3,12 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require './environments'
-class Contact < ActiveRecord::Base
-  self.table_name = 'salesforce.contact'
+class CampainMember < ActiveRecord::Base
+  self.table_name = 'salesforce.campainmember'
 end
 
 get "/campaignmember" do
-  @campaignmember = Contact.all
+  @campaignmember = CampainMember.all
   erb :index
 end
 
@@ -18,7 +18,7 @@ get "/" do
 end
 
 
-class Contact < ActiveRecord::Base
+class CampainMember < ActiveRecord::Base
   self.table_name = 'salesforce.campaignmember'
 end
 
